@@ -41,22 +41,31 @@ Note that the I2C_LCD_driver.py has the address for the INA219 hard coded (curre
 
 Here is the assembled monitor:
 ![monitor](/screenshots/monitor-1.png)
+
 The inside monitor:
 ![inside](/screenshots/monitor-2.png)
+
 RPI connections to GPIO, power and wifi usb dongle:
 ![rpi connections](/screenshots/monitor-3.png)
+
 Yellow and Orange cables are Scl and Sda lines from RPI, to display and INA219
 ![i2c bus](/screenshots/monitor-4.png)
+
 INA219 board (yes, I put the V+/V- connector on backwards!)
 ![ina219 top](/screenshots/monitor-5.png)
+
 Bottom of the INA219, 3.3V, Ground, Sda and Scl to the RPI
 ![ina219 bottom](/screenshots/monitor-6.png)
+
 Connector board to take solar panel + connector to the V+ on INA219,
 V- from INA219 to an string of resistors in series (or a trimpot), either grounded.  The goal here was disipate about 250 mA at 6V peek.
 The pot isn't rated for 2 Watts, it worked but got pretty hot.
 Resistors should be a little beefier as well (note the discoloration on the right most resistor (it was getting warm!)
 ![power and load board](/screenshots/monitor-7.png)
+
 [This](https://www.amazon.com/gp/product/B07JYYRT7T) Charmast 10400 mA portable charger gets me at least 12-15 hours of time on the pi-zero, so I can set it up outside the night before, and let it run through the day to gather data.
 ![portable charger](/screenshots/monitor-8.png)
+
+I used Grafana to display my data, so I can compare various locations to see when they receive maximum sun.  I should be able to use this information to estimate what sort of power I could get from "real" solar panels.
 ![grafana displa](/screenshots/grafana.png)
 
