@@ -23,10 +23,10 @@ I2C_LCD_driver.py package (included here)
 
 .influxdb config file should contain the following information to connect to the influx db:
 >{
->   "url": "http://<your host>:<your port>",
->   "bucket": "<the influxdb bucket to put data in",
->   "org": "<your organization id>",
->   "token": "<your server token"
+>   "url": "http://**host**:**port**",
+>   "bucket": "**the bucket to put data in**",
+>   "org": "**organization id**",
+>   "token": "**server token**"
 >}
 
 The program requires at least on input, the location, which is used as the location tag in influxdb
