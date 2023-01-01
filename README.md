@@ -14,19 +14,20 @@ influxdb_client - sudo pip install influxdb-client
 I2C_LCD_driver.py package (included here)
 
 **hardware**:
+- Raspberry Pi - I used the pi zero, but any will do
 - [ina219](https://www.adafruit.com/product/904)
 - [Voltaic Systems 6V 2W solar panel](https://www.adafruit.com/product/5366)
-- [Hammer Header Male solderless Connector](https://www.adafruit.com/product/3662)
+- [Hammer Header Male solderless Connector](https://www.adafruit.com/product/3662) if using the pi zero and you don't want to solder connections
 - a few resistors or trim pot to disipate up to 2 Watts of power at peak
 - connectors/wires to connect to the I2C bus and power on the Pi's GPIO.
 
 .influxdb config file should contain the following information to connect to the influx db:
 >{
-   "url": "http://<your host>:<your port>",
-   "bucket": "<the influxdb bucket to put data in",
-   "org": "<your organization id>",
-   "token": "<your server token"
-}
+>   "url": "http://<your host>:<your port>",
+>   "bucket": "<the influxdb bucket to put data in",
+>   "org": "<your organization id>",
+>   "token": "<your server token"
+>}
 
 The program requires at least on input, the location, which is used as the location tag in influxdb
 **optional parameters**:
