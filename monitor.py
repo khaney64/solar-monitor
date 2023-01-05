@@ -220,7 +220,7 @@ if __name__ == "__main__":
     except FileNotFoundError:
         print('did not find .influxdb file')
         exit()
-    print(influx_config)
+    #print(influx_config)
     print(f"Writing to influx server {influx_config['url']}, bucket {influx_config['bucket']}")
 
     try:
